@@ -38,7 +38,7 @@
 		  <option value="<?php echo get_page_link( $page->ID ); ?>" <?php if (is_page($page->ID)) echo 'selected="selected"'; ?>><?php echo $page->post_title; ?></option>
                   <?php $children = get_pages('child_of='.$page->ID.'&sort_column=menu_order'); ?>
 		  <?php foreach ( $children as $child ): ?>
-                  <option value="<?php echo get_page_link( $child->ID ); ?>">|-- <?php echo $child->post_title; ?></option>
+                  <option value="<?php echo get_page_link( $child->ID ); ?>" <?php if (is_page($child->ID)) echo 'selected="selected"'; ?>>|-- <?php echo $child->post_title; ?></option>
 		  <?php endforeach; ?>
 		  <?php endforeach; ?>
 		</select>
