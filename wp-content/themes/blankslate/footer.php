@@ -13,6 +13,11 @@
         window.location.href = 'url' + $(select).val(); 
       }
     </script>
+    <script>
+      $('.dropdown-toggle').on('click', function(e) {
+        window.location.href = $(this).attr('href');
+      });
+</script>
   </body>
 
 </html>

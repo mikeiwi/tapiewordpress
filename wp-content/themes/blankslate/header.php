@@ -45,20 +45,20 @@
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav">
           <?php $pages = get_pages( array( 'sort_column' => 'menu_order', 'parent' => 0 ) ); ?>
-          <?php foreach ( $pages as $page ) { ?>
+          <?php foreach ( $pages as $page ): ?>
 	  <li class="<?php if (is_page($page->ID)) echo 'active'; ?>">
 	    <?php $children = get_pages('child_of='.$page->ID.'&sort_column=menu_order'); ?>
             <a href="<?php echo get_page_link( $page->ID ); ?>" <?php if( count( $children ) != 0 ){ ?>class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false"<?php } ?>><?php echo $page->post_title; ?></a>
-	    <?php if( count( $children ) != 0 ){ ?>
+	    <?php if( count( $children ) != 0 ): ?>
 	    <ul class="dropdown-menu">
 	      <li class="triangle"></li>
-	    <?php foreach ( $children as $child ) { ?>
+	    <?php foreach ( $children as $child ): ?>
 	      <li><a tabindex="-1" href="<?php echo get_page_link( $child->ID ); ?>"><?php echo $child->post_title; ?></a></li>
-	    <?php } ?>
+	    <?php endforeach; ?>
 	    </ul>
-	    <?php } ?>
+	    <?php endif; ?>
           </li>
-	  <?php } ?>
+	  <?php endforeach; ?>
 		</ul>
               </div>
               <!-- /.navbar-collapse -->
