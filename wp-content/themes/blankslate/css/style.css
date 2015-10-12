@@ -1,0 +1,123 @@
+body{
+    font-family: 'PT Sans', sans-serif;
+    padding-top: 40px;
+}
+nav h1{
+    width: 235px; height: 55px;
+    background: url("img/logo.png") no-repeat;
+    position: relative;
+}
+nav h1 a{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    text-indent: -10000px
+}
+
+.navbar-header{
+    float: none;
+}
+.navigation-select{
+    border: 1px solid #eee;
+}
+.navigation-select option{
+    padding: 5px 10px;
+}
+
+.navbar-nav{
+    float:right;
+}
+.navbar-nav > li > a{
+    color:#868689;
+    border-right: 1px solid #97979a;
+    padding:7px 15px;
+}
+.navbar-nav > li.active > a, .navbar-nav > li > a:hover, .navbar-nav > li > a.dropdown-toggle:hover, .navbar-nav > li.open > a.dropdown-toggle{
+    color:#9a394e;
+    border-right: 1px solid #9a394e;
+    background:none;
+}
+.navbar-collapse{
+    padding:0;
+}
+
+.navbar-nav .triangle{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 9px 10px 9px;
+    border-color: transparent transparent #444 transparent;
+    background: none;
+    margin-left: 70px;
+}
+.navbar-nav > li ul{
+    background-color: transparent;
+    font-weight: bold;
+    border-radius: 0;
+    left: -50%;
+    margin-left: 8px;
+    border: none;
+    box-shadow: none;
+}
+.navbar-nav > li ul li{
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #444;
+    background: transparent url('img/dropdown-overlay.png');
+}
+.navbar-nav > li ul li:nth-child(2){
+    border-top: none;
+}
+.navbar-nav > li ul li:last-child{
+    border-bottom: none;
+}
+.navbar-nav > li ul a{
+    color: #aaa;
+    word-wrap: break-word;
+    width: 120px;
+    white-space: normal;
+    padding: 5px 15px;
+    font-size: 12px;
+}
+.navbar-nav > li ul a:hover{
+    background: none;
+    color: #fff;
+}
+
+.main-banner{
+    height:210px;
+    background: #b2b2b2;
+    margin-bottom:3px;
+}
+.page-title{
+    background:#58585a;
+    padding:8px 22px;
+}
+.page-title h2{
+    font-size: 18px;
+    color: #fff;
+    margin: 0;
+    font-weight: bold;
+}
+
+.content{
+    padding: 20px;
+    text-align: justify;
+}
+.content a{ color: #666; }
+.content ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.content ul li{
+    padding-left: 18px;
+    background: url("img/li.png") 0 4px no-repeat;
+}
+.content ul ul{
+    padding-left: 30px;
+}
+.content ul li li{
+    background: url("img/li-2.png") 0 4px no-repeat;
+}
