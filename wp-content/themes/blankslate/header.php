@@ -33,12 +33,14 @@
               <div class="navbar-header">
 		<h1><a href="#">Tapie Castañeda Firma de Abogados</a></h1>
 		<select class="navbar-toggle col-xs-11 navigation-select" onchange="redirectPage(this)">
-		  <option value="1">La Firma</option>
-		  <option value="2">Servicios</option>
-		  <option value="3">|-- Servicio 1</option>
-		  <option value="4">|-- Servicio 2</option>
-		  <option value="5">|-- La FirmaServicio con un texto muy largo que abarca mucho espacio</option>
-		  <option>Contacto</option>
+		  <?php $pages = get_pages( array( 'sort_column' => 'menu_order', 'parent' => 0 ) ); ?>
+		  <?php foreach ( $pages as $page ): ?>
+		  <option value="<?php echo get_page_link( $page->ID ); ?>" <?php if (is_page($page->ID)) echo 'selected="selected"'; ?>><?php echo $page->post_title; ?></option>
+                  <?php $children = get_pages('child_of='.$page->ID.'&sort_column=menu_order'); ?>
+		  <?php foreach ( $children as $child ): ?>
+                  <option value="<?php echo get_page_link( $child->ID ); ?>">|-- <?php echo $child->post_title; ?></option>
+		  <?php endforeach; ?>
+		  <?php endforeach; ?>
 		</select>
               </div>
               <!-- Collect the nav links, forms, and other content for toggling -->

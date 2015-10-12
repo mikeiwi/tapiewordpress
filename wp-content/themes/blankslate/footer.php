@@ -10,7 +10,7 @@
     <script src="<?php echo get_template_directory_uri();; ?>/js/bootstrap-hover-dropdown.min.js"></script>
     <script>
       function redirectPage(select){
-        window.location.href = 'url' + $(select).val(); 
+        window.location.href = $(select).val(); 
       }
     </script>
     <script>
