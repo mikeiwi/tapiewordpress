@@ -55,7 +55,7 @@
 	    <ul class="dropdown-menu">
 	      <li class="triangle"></li>
 	    <?php foreach ( $children as $child ): ?>
-	      <li><a tabindex="-1" href="<?php echo get_page_link( $child->ID ); ?>"><?php echo $child->post_title; ?></a></li>
+	      <li class="<?php if (is_page($child->ID)) echo 'active'; ?>"><a tabindex="-1" href="<?php echo get_page_link( $child->ID ); ?>"><?php echo $child->post_title; ?></a></li>
 	    <?php endforeach; ?>
 	    </ul>
 	    <?php endif; ?>

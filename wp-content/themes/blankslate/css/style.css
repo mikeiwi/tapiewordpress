@@ -65,6 +65,7 @@ nav h1 a{
     border-bottom: 1px solid #000;
     border-top: 1px solid #444;
     background: transparent url('img/dropdown-overlay.png');
+    padding: 0;
 }
 .navbar-nav > li ul li:nth-child(2){
     border-top: none;
@@ -75,12 +76,13 @@ nav h1 a{
 .navbar-nav > li ul a{
     color: #aaa;
     word-wrap: break-word;
-    width: 120px;
+    width: 160px;
     white-space: normal;
     padding: 5px 15px;
     font-size: 12px;
+    display:block;
 }
-.navbar-nav > li ul a:hover{
+.navbar-nav > li ul a:hover, .navbar-nav > li ul li.active a, .navbar-nav > li ul li.active a:hover{
     background: none;
     color: #fff;
 }
