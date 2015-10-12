@@ -44,23 +44,21 @@
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav">
-                  <li class="active">
-                    <a href="#">La Firma</a>
-                  </li>
-		  <li>
-		    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false">
-		      Servicios
-		    </a>
-		    <ul class="dropdown-menu">
-		      <li class="triangle"></li>
-		      <li><a tabindex="-1" href="#">Servicio 1</a></li>
-		      <li><a tabindex="-1" href="#">Servicio 2</a></li>
-		      <li><a tabindex="-1" href="#">Servicio con un texto muy largo que abarca mucho espacio</a></li>
-		    </ul>
-		  </li>
-                  <li>
-                    <a href="#">Online</a>
-                  </li>
+          <?php $pages = get_pages( array( 'sort_column' => 'menu_order', 'parent' => 0 ) ); ?>
+          <?php foreach ( $pages as $page ) { ?>
+	  <li class="<?php if (is_page($page->ID)) echo 'active'; ?>">
+	    <?php $children = get_pages('child_of='.$page->ID.'&sort_column=menu_order'); ?>
+            <a href="<?php echo get_page_link( $page->ID ); ?>" <?php if( count( $children ) != 0 ){ ?>class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false"<?php } ?>><?php echo $page->post_title; ?></a>
+	    <?php if( count( $children ) != 0 ){ ?>
+	    <ul class="dropdown-menu">
+	      <li class="triangle"></li>
+	    <?php foreach ( $children as $child ) { ?>
+	      <li><a tabindex="-1" href="<?php echo get_page_link( $child->ID ); ?>"><?php echo $child->post_title; ?></a></li>
+	    <?php } ?>
+	    </ul>
+	    <?php } ?>
+          </li>
+	  <?php } ?>
 		</ul>
               </div>
               <!-- /.navbar-collapse -->
