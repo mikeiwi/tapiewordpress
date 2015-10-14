@@ -17,35 +17,37 @@
 // ** Ajustes de MySQL. Solicita estos datos a tu proveedor de alojamiento web. ** //
 /** El nombre de tu base de datos de WordPress */
 // mysql://b6c461fd6d3c8e:ad6c7655@us-cdbr-iron-east-03.cleardb.net/heroku_a93d86c5c55e2a6?reconnect=true
-define('DB_NAME', 'heroku_a93d86c5c55e2a6');
+if (!file_exists('/var/www/html/tapie/local_environment')){
+    define('DB_NAME', 'heroku_a93d86c5c55e2a6');
 
-/** Tu nombre de usuario de MySQL */
-define('DB_USER', 'b6c461fd6d3c8e');
+    /** Tu nombre de usuario de MySQL */
+    define('DB_USER', 'b6c461fd6d3c8e');
 
-/** Tu contraseña de MySQL */
-define('DB_PASSWORD', 'ad6c7655');
+    /** Tu contraseña de MySQL */
+    define('DB_PASSWORD', 'ad6c7655');
 
-/** Host de MySQL (es muy probable que no necesites cambiarlo) */
-define('DB_HOST', 'us-cdbr-iron-east-03.cleardb.net');
+    /** Host de MySQL (es muy probable que no necesites cambiarlo) */
+    define('DB_HOST', 'us-cdbr-iron-east-03.cleardb.net');
+    
+    /** Codificación de caracteres para la base de datos. */
+    define('DB_CHARSET', 'utf8mb4');
 
-/** Codificación de caracteres para la base de datos. */
-define('DB_CHARSET', 'utf8mb4');
+    /** Cotejamiento de la base de datos. No lo modifiques si tienes dudas. */
+    define('DB_COLLATE', '');
+}else{
+    echo "loooooooooo";
+    define('DB_NAME', 'tapie');
+    
+    define('DB_USER', 'root');
 
-/** Cotejamiento de la base de datos. No lo modifiques si tienes dudas. */
-define('DB_COLLATE', '');
+    define('DB_PASSWORD', 'root');
+    
+    define('DB_HOST', 'localhost');
+    
+    define('DB_CHARSET', 'utf8mb4');
 
-/*
-define('DB_NAME', 'tapie');
-
-define('DB_USER', 'root');
-
-define('DB_PASSWORD', 'root');
-
-define('DB_HOST', 'localhost');
-
-define('DB_CHARSET', 'utf8mb4');
-
-define('DB_COLLATE', ''); */
+    define('DB_COLLATE', '');
+}
 
 /**#@+
  * Claves únicas de autentificación.
