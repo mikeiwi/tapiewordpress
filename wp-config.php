@@ -35,7 +35,6 @@ if (!file_exists('/var/www/html/tapie/local_environment')){
     /** Cotejamiento de la base de datos. No lo modifiques si tienes dudas. */
     define('DB_COLLATE', '');
 }else{
-    echo "loooooooooo";
     define('DB_NAME', 'tapie');
     
     define('DB_USER', 'root');
