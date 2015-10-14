@@ -18,6 +18,7 @@
         window.location.href = $(this).attr('href');
       });
 </script>
+  <?php wp_footer(); ?>
   </body>
 
 </html>
