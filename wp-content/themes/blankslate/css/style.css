@@ -1,9 +1,9 @@
 body{
     font-family: 'PT Sans', sans-serif;
-    padding-top: 40px;
+    padding-top: 50px;
 }
 nav h1{
-    width: 235px; height: 55px;
+    width: 451px; height: 133px;
     background: url("img/logo.png") no-repeat;
     position: relative;
 }
