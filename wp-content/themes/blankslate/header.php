@@ -32,7 +32,7 @@
             <nav class="navbar" role="navigation">
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
-		<h1><a href="#">Tapie Castañeda Firma de Abogados</a></h1>
+		<h1><a href="<?php echo get_site_url(); ?>">Tapie Castañeda Firma de Abogados</a></h1>
 		<select class="navbar-toggle col-xs-11 navigation-select" onchange="redirectPage(this)">
 		  <?php $pages = get_pages( array( 'sort_column' => 'menu_order', 'parent' => 0 ) ); ?>
 		  <?php foreach ( $pages as $page ): ?>

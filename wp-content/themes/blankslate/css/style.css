@@ -1,6 +1,7 @@
 body{
     font-family: 'PT Sans', sans-serif;
     padding-top: 50px;
+    font-size:15px;
 }
 nav h1{
     width: 451px; height: 133px;
@@ -94,13 +95,12 @@ nav h1 a{
 }
 .page-title{
     background:#58585a;
-    padding:8px 22px;
+    padding:11px 22px 8px;
 }
 .page-title h2{
-    font-size: 18px;
+    font-size: 21px;
     color: #fff;
     margin: 0;
-    font-weight: bold;
 }
 
 .content{
