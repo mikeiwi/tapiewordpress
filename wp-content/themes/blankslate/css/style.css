@@ -123,3 +123,15 @@ nav h1 a{
 .content ul li li{
     background: url("img/li-2.png") 0 4px no-repeat;
 }
+.content .alignright{
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+@media (max-width: 768px) {
+    .content .alignright{
+	position: relative;
+	margin-bottom: 10px;
+    }
+}
