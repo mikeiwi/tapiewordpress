@@ -18,16 +18,16 @@
 /** El nombre de tu base de datos de WordPress */
 // mysql://b6c461fd6d3c8e:ad6c7655@us-cdbr-iron-east-03.cleardb.net/heroku_a93d86c5c55e2a6?reconnect=true
 if (!file_exists('/var/www/html/tapie/local_environment')){
-    define('DB_NAME', 'heroku_a93d86c5c55e2a6');
+    define('DB_NAME', 'tapie');
 
     /** Tu nombre de usuario de MySQL */
-    define('DB_USER', 'b6c461fd6d3c8e');
+    define('DB_USER', 'gt2129_wordpress');
 
     /** Tu contraseña de MySQL */
-    define('DB_PASSWORD', 'ad6c7655');
+    define('DB_PASSWORD', 'Piedra2504');
 
     /** Host de MySQL (es muy probable que no necesites cambiarlo) */
-    define('DB_HOST', 'us-cdbr-iron-east-03.cleardb.net');
+    define('DB_HOST', 'localhost');
     
     /** Codificación de caracteres para la base de datos. */
     define('DB_CHARSET', 'utf8mb4');
