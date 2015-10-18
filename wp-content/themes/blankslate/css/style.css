@@ -4,7 +4,7 @@ body{
     font-size:15px;
 }
 nav h1{
-    width: 451px; height: 133px;
+    width: 307px; height: 73px;
     background: url("img/logo.png") no-repeat;
     position: relative;
 }
@@ -89,7 +89,7 @@ nav h1 a{
 }
 
 .main-banner{
-    height:210px;
+    height:250px;
     background: #b2b2b2;
     margin-bottom:3px;
 }
