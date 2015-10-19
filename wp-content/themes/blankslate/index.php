@@ -4,12 +4,14 @@
             <div class="col-md-12 main-banner">
             </div>
             <div class="col-md-12 text-left page-title">
+              <?php if ( $post->ID != 2 ): ?>
               <h2><?php $parents = get_post_ancestors( $post->ID );
 		foreach ( $parents as $parent ):
 		  echo get_the_title( $parent ).' | ';
 		endforeach;
 		?>
 		<?php the_title(); ?></h2>
+            <?php endif; ?>
             </div>
             <div class="content col-md-12">
               <?php the_content(); ?>
