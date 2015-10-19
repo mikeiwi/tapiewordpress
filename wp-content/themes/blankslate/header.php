@@ -47,7 +47,7 @@
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav">
-          <?php $pages = get_pages( array( 'sort_column' => 'menu_order', 'parent' => 0 ) ); ?>
+          <?php $pages = get_pages( array( 'sort_column' => 'menu_order', 'parent' => 0, 'exclude' => 2 ) ); ?>
           <?php foreach ( $pages as $page ): ?>
 	  <li class="<?php if (is_page($page->ID)) echo 'active'; ?>">
 	    <?php $children = get_pages('child_of='.$page->ID.'&sort_column=menu_order'); ?>
