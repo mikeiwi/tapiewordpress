@@ -34,7 +34,7 @@
               <div class="navbar-header">
 		<h1><a href="<?php echo get_site_url(); ?>">Tapie Castañeda Firma de Abogados</a></h1>
 		<select class="navbar-toggle col-xs-11 navigation-select" onchange="redirectPage(this)">
-		  <?php $pages = get_pages( array( 'sort_column' => 'menu_order', 'parent' => 0 ) ); ?>
+		  <?php $pages = get_pages( array( 'sort_column' => 'menu_order', 'parent' => 0, 'exclude' => 2 ) ); ?>
 		  <?php foreach ( $pages as $page ): ?>
 		  <option value="<?php echo get_page_link( $page->ID ); ?>" <?php if (is_page($page->ID)) echo 'selected="selected"'; ?>><?php echo $page->post_title; ?></option>
                   <?php $children = get_pages('child_of='.$page->ID.'&sort_column=menu_order'); ?>
