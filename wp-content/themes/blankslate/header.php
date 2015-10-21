@@ -49,7 +49,7 @@
 		<ul class="nav navbar-nav">
           <?php $pages = get_pages( array( 'sort_column' => 'menu_order', 'parent' => 0, 'exclude' => 2 ) ); ?>
           <?php foreach ( $pages as $page ): ?>
-	  <li class="<?php if (is_page($page->ID)) echo 'active'; ?>">
+	  <li class="<?php if (is_page($page->ID) || $post->post_parent == $page->ID) echo 'active'; ?>">
 	    <?php $children = get_pages('child_of='.$page->ID.'&sort_column=menu_order'); ?>
             <a href="<?php echo get_page_link( $page->ID ); ?>" <?php if( count( $children ) != 0 ){ ?>class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false"<?php } ?>><?php echo $page->post_title; ?></a>
 	    <?php if( count( $children ) != 0 ): ?>
