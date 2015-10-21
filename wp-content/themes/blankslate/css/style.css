@@ -31,7 +31,7 @@ nav h1 a{
     float:right;
 }
 .navbar-nav > li > a{
-    color:#868689;
+    color:#000;
     border-right: 1px solid #97979a;
     padding:7px 15px;
 }
@@ -39,6 +39,7 @@ nav h1 a{
     color:#9a394e;
     border-right: 1px solid #9a394e;
     background:none;
+    font-weight: bold;
 }
 .navbar-collapse{
     padding:0;
@@ -104,10 +105,10 @@ nav h1 a{
 }
 
 .content{
-    padding: 20px;
+    padding: 20px 20px 50px;
     text-align: justify;
 }
-.content a{ color: #666; }
+.content a{ color: #9a394e; }
 .content ul{
     margin: 0;
     padding: 0;
@@ -122,6 +123,9 @@ nav h1 a{
 }
 .content ul li li{
     background: url("img/li-2.png") 0 4px no-repeat;
+}
+.content ul li a{
+    color: #666;
 }
 .content .alignright{
     position: absolute;
