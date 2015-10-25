@@ -133,6 +133,7 @@ nav h1 a{
     top: 10px;
 }
 
+
 @media (max-width: 768px) {
     .content .alignright{
 	position: relative;
