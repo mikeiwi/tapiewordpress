@@ -141,4 +141,7 @@ nav h1 a{
 	position: relative;
 	margin-bottom: 10px;
     }
+    .content ul li{
+        margin-bottom: 12px;
+    }
 }
