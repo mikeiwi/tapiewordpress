@@ -90,10 +90,13 @@ nav h1 a{
 }
 
 .main-banner{
-    height:250px;
-    background: #b2b2b2;
     margin-bottom:3px;
 }
+.main-banner img{
+    width: 100%;
+    height:auto;
+}
+
 .page-title{
     background:#58585a;
     padding:11px 22px 8px;
@@ -141,5 +144,8 @@ nav h1 a{
     .content .alignright{
 	position: relative;
 	margin-bottom: 10px;
+    }
+    .content ul li{
+        margin-bottom: 12px;
     }
 }

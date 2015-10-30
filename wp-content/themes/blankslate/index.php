@@ -1,7 +1,8 @@
 <?php get_header(); ?>
           <div class="row">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <div class="col-md-12 main-banner">
+            <div class="main-banner">
+              <?php the_post_thumbnail(); ?>
             </div>
             <div class="col-md-12 text-left page-title">
               <?php if ( $post->ID != 2 ): ?>
