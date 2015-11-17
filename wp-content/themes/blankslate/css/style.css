@@ -41,6 +41,9 @@ nav h1 a{
     background:none;
     font-weight: bold;
 }
+.navbar-nav > li:hover > ul.dropdown-menu {
+    display: block;
+}
 .navbar-collapse{
     padding:0;
 }
